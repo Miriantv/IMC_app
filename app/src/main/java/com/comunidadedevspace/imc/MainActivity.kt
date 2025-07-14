@@ -1,5 +1,6 @@
 package com.comunidadedevspace.imc
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -35,8 +36,9 @@ class MainActivity : AppCompatActivity() {
                 val alturaQ2 = altura * altura
                 val resultado = peso / alturaQ2
 
-                println("Mirian, acao botao" + resultado)
-
+                val intent = Intent(this, ResultActivity::class.java)
+                startActivity(intent)
+                println("Mirian, acao botao$resultado")
 
             }
         }
